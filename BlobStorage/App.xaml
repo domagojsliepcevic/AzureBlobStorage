@@ -1,0 +1,27 @@
+﻿<Application x:Class="BlobStorage.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BlobStorage"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+        <ImageBrush x:Key="Gradient" ImageSource="/Assets/gradient.png"/>
+
+        <!-- Define a base style for common properties -->
+        <Style x:Key="BaseControlStyle" TargetType="Control">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#ff384180"/>
+        </Style>
+
+        <!-- Apply the base style to specific controls -->
+        <Style TargetType="TextBox" BasedOn="{StaticResource BaseControlStyle}" />
+        <Style TargetType="ListBox" BasedOn="{StaticResource BaseControlStyle}" />
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+    </Application.Resources>
+</Application>
